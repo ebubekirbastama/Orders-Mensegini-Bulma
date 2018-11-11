@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.gepir.org.tr/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.gepir.org.tr/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.gepir.org.tr/">
+      <s:element name="SearchByGTIN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sGTIN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchByGTINResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchByGTINResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SearchByGLN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sGLN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchByGLNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchByGLNResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchBySSCC">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sSSCC" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchBySSCCResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchBySSCCResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchByName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="city" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="streetAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="country" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchByNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchByNameResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Login">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPremiumPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LoginResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LoginResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchByGTINSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchByGTIN" />
+  </wsdl:message>
+  <wsdl:message name="SearchByGTINSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchByGTINResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchByGLNSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchByGLN" />
+  </wsdl:message>
+  <wsdl:message name="SearchByGLNSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchByGLNResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchBySSCCSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchBySSCC" />
+  </wsdl:message>
+  <wsdl:message name="SearchBySSCCSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchBySSCCResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchByNameSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchByName" />
+  </wsdl:message>
+  <wsdl:message name="SearchByNameSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapIn">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="LoginSoapOut">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AndroidSoap">
+    <wsdl:operation name="SearchByGTIN">
+      <wsdl:input message="tns:SearchByGTINSoapIn" />
+      <wsdl:output message="tns:SearchByGTINSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByGLN">
+      <wsdl:input message="tns:SearchByGLNSoapIn" />
+      <wsdl:output message="tns:SearchByGLNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchBySSCC">
+      <wsdl:input message="tns:SearchBySSCCSoapIn" />
+      <wsdl:output message="tns:SearchBySSCCSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchByName">
+      <wsdl:input message="tns:SearchByNameSoapIn" />
+      <wsdl:output message="tns:SearchByNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input message="tns:LoginSoapIn" />
+      <wsdl:output message="tns:LoginSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AndroidSoap" type="tns:AndroidSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchByGTIN">
+      <soap:operation soapAction="http://www.gepir.org.tr/SearchByGTIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByGLN">
+      <soap:operation soapAction="http://www.gepir.org.tr/SearchByGLN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBySSCC">
+      <soap:operation soapAction="http://www.gepir.org.tr/SearchBySSCC" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByName">
+      <soap:operation soapAction="http://www.gepir.org.tr/SearchByName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://www.gepir.org.tr/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AndroidSoap12" type="tns:AndroidSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SearchByGTIN">
+      <soap12:operation soapAction="http://www.gepir.org.tr/SearchByGTIN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByGLN">
+      <soap12:operation soapAction="http://www.gepir.org.tr/SearchByGLN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchBySSCC">
+      <soap12:operation soapAction="http://www.gepir.org.tr/SearchBySSCC" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchByName">
+      <soap12:operation soapAction="http://www.gepir.org.tr/SearchByName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap12:operation soapAction="http://www.gepir.org.tr/Login" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Android">
+    <wsdl:port name="AndroidSoap" binding="tns:AndroidSoap">
+      <soap:address location="http://www.gepir.org.tr/mobileservice/Android/Android.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AndroidSoap12" binding="tns:AndroidSoap12">
+      <soap12:address location="http://www.gepir.org.tr/mobileservice/Android/Android.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
